@@ -1,28 +1,46 @@
-# Create T3 App
+# TodoZen
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a task management app built with t3-stack. It allows users to create, update, and delete tasks, as well as mark them as complete.
 
-## What's next? How do I make an app with this?
+## Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- User authentication with Next-Auth and JWT
+- Create, update, and delete tasks
+- Mark tasks as complete
+- Filter tasks by completed status
+- Server-side rendering with Next.js
+- Styling with TailwindCSS
+- ORM and database management with Prisma and MySQL
+- Automatic scaling with PlanetScale
+- Type-safe communication between server and client with TRPC
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Technologies Used
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- [Next.js](https://nextjs.org) for server-side rendering and routing
+- [Tailwind CSS](https://tailwindcss.com) for styling
+- [Prisma](https://prisma.io) for ORM and database management
+- MySQL for database storage
+- PlanetScale for automatic scaling and replication of MySQL databases
+- [tRPC](https://trpc.io) for type-safe communication between server and client
+- [NextAuth.js](https://next-auth.js.org) for user authentication with JWT
 
-## Learn More
+## Setup
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+- Clone this repository
+- Install dependencies with npm install
+- Create a `.env` file and add the necessary environment variables (see `.env.example` for reference)
+- Run the development server with npm run dev
+- Open http://localhost:3000 in your browser
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## Deployment
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+- Set the necessary environment variables in your deployment environment
 
-## How do I deploy this?
+## Contributing
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Contributions are welcome! Please see the contributing guidelines for more information.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
