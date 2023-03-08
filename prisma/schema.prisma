@@ -60,6 +60,7 @@ model User {
     accounts      Account[]
     sessions      Session[]
     Project       Project[]
+    Task          Task?
 }
 
 model VerificationToken {
@@ -74,12 +75,12 @@ model Project {
     id          String   @id @default(cuid())
     name        String?
     description String
+    userId      String
     startDate   DateTime
     endDate     DateTime
     status      String
-    userId      String
-    user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
     Task        Task[]
+    user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
     @@index([userId])
 }
@@ -89,12 +90,16 @@ model Task {
     name           String?
     description    String
     priority       String
+    projectId      String
+    userId         String    @unique
     status         String
+    completed      Boolean
     dueDate        DateTime?
     completionDate DateTime?
     createdDate    DateTime  @default(now())
-    projectId      String
+    user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
     project        Project   @relation(fields: [projectId], references: [id], onDelete: Cascade)
 
     @@index([projectId])
+    @@index([userId])
 }
